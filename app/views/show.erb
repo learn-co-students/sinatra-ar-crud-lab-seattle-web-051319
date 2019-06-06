@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	</head>
+	
+	<body>
+		<p>Title: <%= @article.title %><br>Content: <%= @article.content %></p>
+		<form method="POST" action="/articles/<%= @article.id %>">
+			<input id="hidden" type="hidden" name="_method" value="DELETE">
+			<input type="submit" value="Delete">
+		</form>
+	</body>
+</html>
